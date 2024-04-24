@@ -25,7 +25,7 @@ export function filterAndSortData(filters: ReservationFilters, data: Reservation
 }
 
 function filterByName(search: string, data: ReservationModel[]): ReservationModel[] {
-    return data.filter(({ customer }) => `${customer.firstName} ${customer.lastName}`.includes(search))
+    return data.filter(({ customer }) => `${customer.firstName} ${customer.lastName}`.toLowerCase().includes(search.toLowerCase()))
 }
 
 function filterByStatus(statuses: RESERVATION_STATUS[], data: ReservationModel[]): ReservationModel[] {

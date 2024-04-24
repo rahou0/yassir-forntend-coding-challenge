@@ -28,8 +28,6 @@ function Filters(props: FiltersProps) {
     const [shifts, setShifts] = useQueryState('shifts', parseAsArrayOf(parseAsString).withOptions({ history: 'push' }))
     const [date, setDate] = useQueryStates({ from: parseAsIsoDateTime, to: parseAsIsoDateTime }, { history: 'push' });
 
-    console.log({ search, statuses, shifts, areas, ...date })
-    console.log(areAllPropertiesEmpty({search, statuses, shifts, areas, ...date}))
     const onChangeDateFilter = (date: DateRange | undefined) => {
         if (date?.from) {
             setDate({ from: dayjs.utc(date.from).startOf('day').toDate() })
@@ -50,7 +48,7 @@ function Filters(props: FiltersProps) {
     return (
         <FilterBar
             reset={handleFilterReset}
-            properties={{ search, statuses, shifts, areas, ...date }}
+            properties={{ search, statuses, shifts, areas, from: date.from?.toString(), to: date.to?.toString() }}
             isLoading={props.isLoading}
             isLarge={true}
             filters={
@@ -75,7 +73,7 @@ function Filters(props: FiltersProps) {
                     }
                     {date?.from &&
                         <Tag closable onClose={() => setDate({ from: null })}>
-                        <strong>{'From'}</strong>{': '} {dayjs(date.from).format('DD-MM-YYYY')}
+                            <strong>{'From'}</strong>{': '} {dayjs(date.from).format('DD-MM-YYYY')}
                         </Tag>}
                     {date?.to &&
                         <Tag closable onClose={() => setDate({ to: null })}>

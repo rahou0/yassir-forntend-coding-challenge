@@ -1,5 +1,7 @@
 # Restaurant Reservation Management Interface for Yassir Frontend Coding Challenge 
 
+A live demo of the project can be found [here](https://yassir-forntend-coding-challenge.vercel.app/).
+
 1. **Technology Stack**: React, Next.js, TypeScript, Redux Toolkit, shadcn.
 
 2. **Data Fetching**: Mock data provided by Yassir will be used instead of retrieving data from a live API (i used redux rtk to fetch the data from the github repository to simulate data fetching).

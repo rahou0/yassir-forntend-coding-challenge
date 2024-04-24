@@ -12,7 +12,7 @@ interface MainLayoutProps {
 function MainLayout({ children }: MainLayoutProps) {
     return (
         <div className="flex min-h-screen flex-col space-y-6">
-            <header className="sticky top-0 z-40 border-b bg-background">
+            <header className="sticky top-0 z-[999999] border-b bg-background">
                 <div className="container flex h-16 justify-between py-4">
                     <MainAppNav items={dashboardConfig.mainNav} />
                     <div className="flex items-center space-x-4 rtl:space-x-reverse">
