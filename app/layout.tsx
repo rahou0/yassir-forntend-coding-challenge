@@ -1,5 +1,5 @@
 "use client"
-// import type { Metadata } from "next";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils"
@@ -8,11 +8,6 @@ import store from "@/services/store";
 import {Provider} from "react-redux";
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans", });
 import {Toaster} from "@/components/ui/toaster";
-
-// export const metadata: Metadata = {
-//   title: "Frontend Engineer Coding Challenge",
-//   description: "Frontend Engineer Coding Challenge",
-// };
 
 export default function RootLayout({
   children,
