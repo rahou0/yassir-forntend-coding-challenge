@@ -108,7 +108,7 @@ export function DataTable<T, TValue>({ columns, data, totalItems, pageCount, pag
                                     <EmptyPlaceholder>
                                         <EmptyPlaceholder.Icon name="circleOff" />
                                         <EmptyPlaceholder.Description>
-                                            {emptyPlaceHolderText ?? 'لا يوجد معلومات حاليا'}
+                                            {emptyPlaceHolderText ?? 'No Data Availlable right now'}
 
                                         </EmptyPlaceholder.Description>
                                     </EmptyPlaceholder>

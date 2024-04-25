@@ -3,7 +3,7 @@ import { parseAsString, useQueryState, parseAsArrayOf, useQueryStates, parseAsIs
 import FilterBar from "@/components/filter-bar";
 import { MultiSelect } from "@/components/multi-select";
 import { RESERVATION_AREA, RESERVATION_SHIFT, RESERVATION_STATUS } from "@/models/reservation";
-import { areAllPropertiesEmpty, enumToOptions } from "@/lib/utils";
+import { enumToOptions } from "@/lib/utils";
 import Tag from "@/components/ui/tag";
 import SearchInput from "@/components/search-input";
 import { DatePickerWithRange } from "@/components/date-range-picker";
